@@ -9,6 +9,14 @@
       gtag('js', new Date());
       gtag('config', 'UA-132910306-1');
     </script>
+    <script>
+        var trackOutboundLink = function(url) {
+           ga('send', 'event', 'outbound', 'click', url, {
+             'transport': 'beacon',
+             'hitCallback': function(){document.location = url;}
+           });
+        }
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +47,7 @@
     <p class="leading-normal mb-4 text-grey-dark">2SMPB-02Eは高精度・低消費電流の小型MEMS絶対圧センサです。低ノイズの24bit ADCを内蔵し、気圧を高精度に測定することができます。制御と出力は I2C/SPI インターフェースを通じたデジタル方式で、自動スリープモードによる低消費電流を実現しています。</p>
     <ul class="horizontal-li">
       <li>販売 : </li>
-      <li><a href="https://www.switch-science.com/catalog/5329/">スイッチサイエンス</a></li>
+      <li><a href="https://www.switch-science.com/catalog/5329/"onclick="trackOutboundLink('https://www.switch-science.com/catalog/5329/'); return false;">スイッチサイエンス</a></li>
     </ul>
     <ul class="horizontal-li">
       <li>GitHub : </li>
